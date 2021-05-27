@@ -30,7 +30,7 @@ $(RULE_PARSER).c: $(PARSER_DIR)/Makefile $(PARSER_DIR)/parser.y $(PARSER_DIR)/pa
 	$(CC) $(CFLAGS) -c $< -o $@  
 
 tapo: $(OBJS)
-	$(LD) $(LDFLAGS) $(LIBS) $(OBJS) -o $(TARGET)
+	$(LD) $(LDFLAGS) $(OBJS) -o $(TARGET) $(LIBS)
 
 tags: $(wildcard *.[hc]) 
 	$(CTAGS) $(wildcard *.[hc])
